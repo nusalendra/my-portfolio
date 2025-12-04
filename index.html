@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>... - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">...</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang Saya</a></li>
+                <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                <li><a href="#projects" class="nav-link">Project</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-greeting">Halo, Saya</span>
+                    <h1 class="hero-title">...</h1>
+                    <p class="hero-subtitle">Web Developer & UI/UX Designer</p>
+                    <p class="hero-description">Saya menciptakan pengalaman digital yang indah dan fungsional</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">Hubungi Saya</a>
+                        <a href="#projects" class="btn-secondary">Lihat Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-placeholder">
+                        <span>👨‍💻</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>Halo! Saya ..., seorang Web Developer yang passionate dalam menciptakan website dan aplikasi web yang modern, responsif, dan user-friendly.</p>
+                    <p>Dengan pengalaman lebih dari 3 tahun di bidang web development, saya fokus pada pengembangan frontend dan backend menggunakan teknologi terkini.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">Nama:</span>
+                            <span class="info-value">...</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Lokasi:</span>
+                            <span class="info-value">Surabaya, Indonesia</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">...@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status:</span>
+                            <span class="info-value">Tersedia untuk Freelance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Keahlian Saya</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">💻</div>
+                    <h3>Frontend Development</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Backend Development</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">REST API</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Design & Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Project Saya</h2>
+            
+            <!-- Button to open modal -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <button id="openModalBtn" class="btn-add-project">+ Tambah Project Baru</button>
+            </div>
+
+            <!-- Projects Grid (akan diisi dari database) -->
+            <div id="projectsGrid" class="projects-grid">
+                <div class="loading">Memuat Project...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <p class="contact-subtitle">Punya Project atau ingin berkolaborasi? Jangan ragu untuk menghubungi saya!</p>
+            
+            <div class="contact-wrapper">
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Nomor Telepon (Opsional)">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Pesan Anda" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Kirim Pesan</button>
+                    </form>
+                    <div id="contactMessage" class="form-message"></div>
+                </div>
+
+                <div class="contact-info-container">
+                    <div class="contact-item-alt">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>...@example.com</p>
+                    </div>
+                    <div class="contact-item-alt">
+                        <div class="contact-icon">📱</div>
+                        <h3>WhatsApp</h3>
+                        <p>+62 xxx-xxxx-xxxx</p>
+                    </div>
+                    <div class="contact-item-alt">
+                        <div class="contact-icon">📍</div>
+                        <h3>Lokasi</h3>
+                        <p>Malang, Jawa Timur</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-section">
+                <h3>Temukan Saya Di:</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-link">
+                        <span>🔗</span> LinkedIn
+                    </a>
+                    <a href="#" target="_blank" class="social-link">
+                        <span>💻</span> GitHub
+                    </a>
+                    <a href="#" target="_blank" class="social-link">
+                        <span>📷</span> Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ... All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Adding Project -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Tambah Project Baru</h2>
+            <form id="projectForm" class="project-form">
+                <div class="form-group">
+                    <label>Nama Project</label>
+                    <input type="text" name="project_name" required>
+                </div>
+                <div class="form-group">
+                    <label>Deskripsi</label>
+                    <textarea name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Teknologi (pisahkan dengan koma)</label>
+                    <input type="text" name="technologies" placeholder="PHP, MySQL, JavaScript" required>
+                </div>
+                <div class="form-group">
+                    <label>Link Demo (opsional)</label>
+                    <input type="url" name="demo_link" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label>Link Source Code (opsional)</label>
+                    <input type="url" name="source_link" placeholder="https://github.com/...">
+                </div>
+                <button type="submit" class="btn-submit">Simpan Project</button>
+            </form>
+            <div id="projectMessage" class="form-message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
